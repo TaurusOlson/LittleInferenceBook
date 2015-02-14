@@ -8,5 +8,7 @@ all: $(MDS)
 clean:
 	rm -fv $(PDFS)
 
+%.pdf: %.md
+	pandoc $+ -o $@
 
 .PHONY: clean
