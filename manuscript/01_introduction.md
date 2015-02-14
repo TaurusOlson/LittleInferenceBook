@@ -30,7 +30,7 @@ Try it out, it's probably the most effective way to learn.
 Statistical inference is the process of drawing formal conclusions from
 data.
 
-In our class, we wil define formal statistical inference as settings where one wants to infer facts about a population using noisy
+In our class, we will define formal statistical inference as settings where one wants to infer facts about a population using noisy
 statistical data where uncertainty must be accounted for.
 
 
@@ -75,7 +75,7 @@ to use data to create general conclusions about a population.
   - Are there known and observed, known and unobserved or unknown and unobserved variables that contaminate our conclusions?
   - Is there systematic bias created by missing data or the design or conduct of the study?
   - What randomness exists in the data and how do we use or adjust for it? Here randomness can either be explicit via randomization
-or random sampling, or implicit as the aggregation of many complex uknown processes.
+or random sampling, or implicit as the aggregation of many complex unknown processes.
   - Are we trying to estimate an underlying mechanistic model of phenomena under study?
 - Statistical inference requires navigating the set of assumptions and
 tools and subsequently thinking about how to draw conclusions from data.
