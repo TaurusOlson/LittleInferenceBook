@@ -25,23 +25,23 @@ the probability has increased dramatically.
 We can formalize the definition of conditional probability so that the mathematics
 matches our intuition.
 
-Let {$$}B{/$$} be an event so that {$$}P(B) > 0{/$$}.
-Then the conditional probability of an event {$$}A{/$$} given
-that {$$}B{/$$} has occurred is:
+Let $$B$$ be an event so that $$P(B) > 0$$.
+Then the conditional probability of an event $$A$$ given
+that $$B$$ has occurred is:
 
-{$$}
+$$
 P(A ~|~ B) = \frac{P(A \cap B)}{P(B)}.
-{/$$}
+$$
 
-If {$$}A{/$$} and {$$}B{/$$} are unrelated in any way, or in other words
+If $$A$$ and $$B$$ are unrelated in any way, or in other words
 *independent*, (disccussed more later in the lecture), then
 
-{$$}
+$$
 P(A ~|~ B) = \frac{P(A) P(B)}{P(B)} = P(A)
-{/$$}
+$$
 
-That is, if the occurrence of {$$}B{/$$} offers no information about the
-occurrence of {$$}A{/$$} - the probability conditional on the information
+That is, if the occurrence of $$B$$ offers no information about the
+occurrence of $$A$$ - the probability conditional on the information
 is the same as the probability without the information, we say that the
 two events are independent.
 
@@ -49,14 +49,14 @@ two events are independent.
 ### Example
 
 Consider our die roll example again. Here we have that
-{$$}B = \{1, 3, 5\}{/$$} and  {$$}A = \{1\}{/$$}
+$$B = \{1, 3, 5\}$$ and  $$A = \{1\}$$
 
-{$$}
+$$
 P(\mbox{one given that roll is odd}) = P(A ~|~ B)
 = \frac{P(A \cap B)}{P(B)}
 = \frac{P(A)}{P(B)}
 = \frac{1/6}{3/6} = \frac{1}{3}
-{/$$}
+$$
 
 Which exactly mirrors our intuition.
 
@@ -82,9 +82,9 @@ a negative test what is the probability of not having the disease?".
 Baye's rule allows us to switch the conditioning event, provided a little
 bit of extra information. Formally Baye's rule is:
 
-{$$}
+$$
 P(B ~|~ A) = \frac{P(A ~|~ B) P(B)}{P(A ~|~ B) P(B) + P(A ~|~ B^c)P(B^c)}.
-{/$$}
+$$
 
 ### Diagnostic tests
 Since diagnostic tests are a really good example of Baye's rule in practice,
@@ -92,16 +92,16 @@ let's go over them in greater detail. (In addition, understanding Baye's rule
 will be helpful for your own ability to understand medical tests that you
 see in your daily life). We require a few definitions first.
 
-Let {$$}+{/$$} and {$$}-{/$$} be the events that the result of a
+Let $$+$$ and $$-$$ be the events that the result of a
 diagnostic test is positive or negative respectively
-Let {$$}D{/$$} and {$$}D^c{/$$} be the event that the subject of the
+Let $$D$$ and $$D^c$$ be the event that the subject of the
 test has or does not have the disease respectively
 
 The **sensitivity** is the probability that the test is positive given
-that the subject actually has the disease, {$$}P(+ ~|~ D){/$$}
+that the subject actually has the disease, $$P(+ ~|~ D)$$
 
 The **specificity** is the probability that the test is negative given that
-the subject does not have the disease, {$$}P(- ~|~ D^c){/$$}
+the subject does not have the disease, $$P(- ~|~ D^c)$$
 
 So, conceptually at least, the sensitivity and specificity are straightforward
 to estimate. Take people known to have and not have the disease and apply the
@@ -113,12 +113,12 @@ and assume that they are known well.
 
 The quantities that we'd like to know are the predictive values.
 
-The **positive predictive value** is the probability that the subject has the  disease given that the test is positive, {$$}P(D ~|~ +){/$$}
+The **positive predictive value** is the probability that the subject has the  disease given that the test is positive, $$P(D ~|~ +)$$
 
-The **negative predictive value** is the probability that the subject does not have the disease given that the test is negative, {$$}P(D^c ~|~ -){/$$}
+The **negative predictive value** is the probability that the subject does not have the disease given that the test is negative, $$P(D^c ~|~ -)$$
 
 Finally, we need one last thing, the **prevalence of the disease** -
-which is the marginal probability of disease, {$$}P(D){/$$}. Let's now
+which is the marginal probability of disease, $$P(D)$$. Let's now
 try to figure out a PPV in a specific setting.
 
 ### Example
@@ -128,17 +128,15 @@ concluded that HIV antibody tests have a sensitivity of 99.7% and a specificity 
 Suppose that a subject, from a population with a .1% prevalence of HIV, receives a positive test result. What is the positive predictive value?
 
 Mathematically, we want $P(D ~|~ +)$ given the sensitivity, $P(+ ~|~ D) = .997$,
-the specificity, {$$}P(- ~|~ D^c) =.985{/$$} and the prevalence
-{$$}P(D) = .001{/$$}.
+the specificity, $$P(- ~|~ D^c) =.985$$ and the prevalence
+$$P(D) = .001$$.
 
-{$$}
 \begin{eqnarray*}
 P(D ~|~ +) & = &\frac{P(+~|~D)P(D)}{P(+~|~D)P(D) + P(+~|~D^c)P(D^c)}\\
  & = & \frac{P(+~|~D)P(D)}{P(+~|~D)P(D) + \{1-P(-~|~D^c)\}\{1 - P(D)\}} \\
  & = & \frac{.997\times .001}{.997 \times .001 + .015 \times .999}\\
  & = & .062
 \end{eqnarray*}
-{/$$}
 
 In this population a positive test result only suggests a 6% probability that
 the subject has the disease, (the positive predictive value is 6% for this test).
@@ -155,43 +153,43 @@ The diagnostic likelihood ratios summarize the evidence of disease given a
 positive or negative test. They are defined as:
 
 
-The **diagnostic likelihood ratio of a positive test**, labeled {$$}DLR_+{/$$},
-is {$$}P(+ ~|~ D) / P(+ ~|~ D^c){/$$}, which is the
-{$$}sensitivity / (1 - specificity){/$$}.
+The **diagnostic likelihood ratio of a positive test**, labeled $$DLR_+$$,
+is $$P(+ ~|~ D) / P(+ ~|~ D^c)$$, which is the
+$$sensitivity / (1 - specificity)$$.
 
-The **diagnostic likelihood ratio of a negative test**, labeled {$$}DLR_-{/$$},
-is {$$}P(- ~|~ D) / P(- ~|~ D^c){/$$}, which is the
-{$$}(1 - sensitivity) / specificity{/$$}.
+The **diagnostic likelihood ratio of a negative test**, labeled $$DLR_-$$,
+is $$P(- ~|~ D) / P(- ~|~ D^c)$$, which is the
+$$(1 - sensitivity) / specificity$$.
 
 How do we interpret the DLRs? This is easiest when looking at so called
-**odds ratios**. Remember that if {$$}p{/$$} is a probability, then
-{$$}p / (1 - p){/$$} is the odds. Consider now the odds in our setting:
+**odds ratios**. Remember that if $$p$$ is a probability, then
+$$p / (1 - p)$$ is the odds. Consider now the odds in our setting:
 
 Using Bayes rule, we have
 
-{$$}  
+$$  
 P(D ~|~ +) = \frac{P(+~|~D)P(D)}{P(+~|~D)P(D) + P(+~|~D^c)P(D^c)}
-{/$$}
+$$
 
 and
 
-{$$}
+$$
 P(D^c ~|~ +) = \frac{P(+~|~D^c)P(D^c)}{P(+~|~D)P(D) + P(+~|~D^c)P(D^c)}.
-{/$$}
+$$
 
 Therefore, dividing these two equations we have:
 
-{$$}
+$$
 \frac{P(D ~|~ +)}{P(D^c ~|~ +)} = \frac{P(+~|~D)}{P(+~|~D^c)}\times \frac{P(D)}{P(D^c)}
-{/$$}
+$$
 
 In other words, the post test odds of disease is the pretest odds of disease
-times the {$$}DLR_+{/$$}. Similarly, $DLR_-$ relates the decrease in the odds
+times the $$DLR_+$$. Similarly, $DLR_-$ relates the decrease in the odds
 of the disease after a negative test result to the odds of disease prior to
 the test.
 
 So, the DLRs are the factors by which you multiply your pre test odds to get
-your post test odds. Thus, if a test has a {$$}DLR_+{/$$} of 6, regardless
+your post test odds. Thus, if a test has a $$DLR_+$$ of 6, regardless
 of the prevalence of disease, the post test odds is six times that of the
 pretest odds.
 
@@ -201,7 +199,7 @@ pretest odds.
 Let's reconsider our HIV antibody test again.  
 Suppose a subject has a positive HIV test
 
-{$$}DLR_+ = .997 / (1 - .985) = 66{/$$}
+$$DLR_+ = .997 / (1 - .985) = 66$$
 
 The result of the positive test is that the odds of disease is now 66 times
 the pretest odds. Or, equivalently, the hypothesis of disease is 66 times
@@ -209,10 +207,10 @@ more supported by the data than the hypothesis of no disease
 
 Suppose instead that a subject has a negative test result
 
-{$$}DLR_- = (1 - .997) / .985  =.003{/$$}
+$$DLR_- = (1 - .997) / .985  =.003$$
 
 Therefore, the post-test odds of disease is now 0.3% of the pretest odds given
-the negative test. Or, the hypothesis of disease is supported {$$}.003{/$$}
+the negative test. Or, the hypothesis of disease is supported $$.003$$
 times that of the hypothesis of absence of disease given the negative test result
 
 
@@ -223,19 +221,19 @@ Statistical independence of events is the idea that the events are unrelated.
 Consider successive coin flips. Knowledge of the result of the first coin flip
 tells us nothing about the second. We can formalize this into a definition.
 
-Two events {$$}A{/$$} and {$$}B{/$$} are **independent** if
+Two events $$A$$ and $$B$$ are **independent** if
 
-{$$}P(A \cap B) = P(A)P(B){/$$}
+$$P(A \cap B) = P(A)P(B)$$
 
-Equivalently if {$$}P(A ~|~ B) = P(A){/$$}. Note that since {$$}A{/$$} is
-independent of {$$}B{/$$} we know that {$$}A^c{/$$} is independent of {$$}B{/$$}
-{$$}A{/$$} is independent of {$$}B^c{/$$}
-{$$}A^c{/$$} is independent of {$$}B^c{/$$}.
+Equivalently if $$P(A ~|~ B) = P(A)$$. Note that since $$A$$ is
+independent of $$B$$ we know that $$A^c$$ is independent of $$B$$
+$$A$$ is independent of $$B^c$$
+$$A^c$$ is independent of $$B^c$$.
 
 While this definition works for sets, remember that random variables are really the things
-that we are interested in. Two random variables, {$$}X{/$$} and {$$}Y{/$$} are independent
+that we are interested in. Two random variables, $$X$$ and $$Y$$ are independent
 if for any two sets
-{$$}A{/$$} and {$$}B{/$$} {$$}P([X \in A] \cap [Y \in B]) = P(X\in A)P(Y\in B){/$$}
+$$A$$ and $$B$$ $$P([X \in A] \cap [Y \in B]) = P(X\in A)P(Y\in B)$$
 
 We will almost never work with these definitions. Instead, the important
 principle is that probabilities of independent things multiply! This has
@@ -246,12 +244,12 @@ probabilities.
 
 Let's cover a very simple example:
 "What is the probability of getting two consecutive heads?". Then we have
-that {$$}A{/$$} is the event of getting a head on flip 1 {$$}P(A) = 0.5{/$$}
-{$$}B{/$$} is the event of getting a head on flip 2 {$$}P(B) = 0.5{/$$}
-{$$}A \cap B{/$$} is the event of getting heads on flips 1 and 2. Then
+that $$A$$ is the event of getting a head on flip 1 $$P(A) = 0.5$$
+$$B$$ is the event of getting a head on flip 2 $$P(B) = 0.5$$
+$$A \cap B$$ is the event of getting heads on flips 1 and 2. Then
 independence would tell us that:
 
-{$$}P(A \cap B) = P(A)P(B) = 0.5 \times 0.5 = 0.25{/$$}
+$$P(A \cap B) = P(A)P(B) = 0.5 \times 0.5 = 0.25$$
 
 This is exactly what we would have intuited of course. But, it's nice that
 the mathematics mirrors our intuition. In more complex settings, it's easy
@@ -264,12 +262,12 @@ Volume 309 of Science reports on a physician who was on trial for expert
 testimony in a criminal trial. Based on an estimated prevalence of sudden
 infant death syndrome (SIDS) of 1 out of 8,543, a physician testified that that
 the probability of a mother having two children with SIDS was
-{$$}(1 / 8,543)^2{/$$}. The mother on trial was convicted
+$$(1 / 8,543)^2$$. The mother on trial was convicted
 of murder.
 
 Relevant to this discussion, the principal mistake was to *assume* that the
 events of having SIDs within a family are independent. That is,
-{$$}P(A_1 \cap A_2){/$$} is not necessarily equal to {$$}P(A_1)P(A_2){/$$}.
+$$P(A_1 \cap A_2)$$ is not necessarily equal to $$P(A_1)P(A_2)$$.
 This is because biological processes that have a believed genetic or familiar
 environmental component, of course, tend to be dependent within families.
 Thus, we can't just multiply the probabilities to obtain the result.

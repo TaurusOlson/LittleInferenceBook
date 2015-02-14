@@ -69,15 +69,15 @@ exclusive.
 
 Let's cover some consequences of our three simple rules.  Take, for example, the
 probability that something occurs is 1 minus the probability of the opposite
-occurring.  Let {$$}A{/$$} be the event that we get a 1 or a 2 on a rolled die.
-Then {$$}A^c{/$$} is the opposite, getting a 3, 4, 5 or 6. Since {$$}A{/$$} and
-{$$}A^c{/$$}
+occurring.  Let $$A$$ be the event that we get a 1 or a 2 on a rolled die.
+Then $$A^c$$ is the opposite, getting a 3, 4, 5 or 6. Since $$A$$ and
+$$A^c$$
 cannot both simultaneously occur, they are mutually exclusive. So
-the probability that either {$$}A{/$$} or {$$}A^c{/$$}  is {$$}P(A) + P(A^c){/$$}.
+the probability that either $$A$$ or $$A^c$$  is $$P(A) + P(A^c)$$.
 Notice, that the probability that either occurs is the probability
 of getting a 1, 2, 3, 4, 5 or 6, or in other words, the probability that
-something occurs, which is 1 by rule number 2.  So we have that {$$}1 = P(A) +
-P(A^c){/$$} or that  {$$}P(A) = 1 - P(A^c){/$$}.
+something occurs, which is 1 by rule number 2.  So we have that $$1 = P(A) +
+P(A^c)$$ or that  $$P(A) = 1 - P(A^c)$$.
 
 We won't go through this tedious exercise (since Kolmorogov already did it for
 us). Instead here's a list of some of the consequences of Kolmogorov's rules
@@ -99,7 +99,7 @@ that are often useful.
      probabilities minus their
 - intersection.
 
-This last rules states that {$$}P(A \cup B) = P(A) + P(B)  - P(A \cap B){/$$}
+This last rules states that $$P(A \cup B) = P(A) + P(B)  - P(A \cap B)$$
 shows what is the issue with adding probabilities that are not mutually
 exclusive.  If we do this, we've added the probability that both occur in twice!
 (Watch the video where I draw a Venn diagram to illustrate this).
@@ -118,22 +118,18 @@ Answer: No, the events can simultaneously occur and so
  are not mutually
 exclusive. To elaborate let:
 
-{$$}
  \begin{eqnarray*}
      A_1 & = & \{\mbox{Person has sleep apnea}\} \\
 A_2 & = & \{\mbox{Person has RLS}\}
    \end{eqnarray*}
- {/$$}
 
 Then
 
-{$$}
  \begin{eqnarray*}
      P(A_1 \cup A_2 ) & = & P(A_1) + P(A_2) - P(A_1 \cap
 A_2) \\
     & = & 0.13 - \mbox{Probability of having both}
    \end{eqnarray*}
- {/$$}
 
 Given the scenario, it's likely that some fraction of the population has both.
 This example serves as a reminder *don't add probabilities unless the events are
@@ -232,16 +228,16 @@ must satisfy
 
 ### Example
 
-Let {$$}X{/$$} be the result of a coin flip where {$$}X=0{/$$}
-represents tails and {$$}X = 1{/$$}
-represents heads. {$$}p(x) = (1/2)^{x} (1/2)^{1-x}{/$$}
-for {$$}x = 0,1{/$$}.
+Let $$X$$ be the result of a coin flip where $$X=0$$
+represents tails and $$X = 1$$
+represents heads. $$p(x) = (1/2)^{x} (1/2)^{1-x}$$
+for $$x = 0,1$$.
 Suppose that we do not know whether or not the coin is fair; Let
- {$$}\theta{/$$} be
+ $$\theta$$ be
 the probability of a head expressed as a proportion
  (between 0 and 1).
-{$$}p(x) = \theta^{x} (1 - \theta)^{1-x} {/$$}
-for {$$}x = 0,1 {/$$}
+$$p(x) = \theta^{x} (1 - \theta)^{1-x} $$
+for $$x = 0,1 $$
 
 ## Probability density functions
 
@@ -275,8 +271,8 @@ Specifically, to be a valid pdf, a function must satisfy
 ### Example
 
 Suppose that the proportion of help calls that get addressed in
-a random day by a help line is given by {$$} f(x) = 2 x {/$$}
-for {$$}0< x < 1{/$$}. The R code for plotting this density is
+a random day by a help line is given by $$ f(x) = 2 x $$
+for $$0< x < 1$$. The R code for plotting this density is
 
 {title='Code for plotting the density', line-numbers=off,lang=r}
 ~~~~~~
@@ -296,7 +292,7 @@ the horizontal axis everywhere). The area is similarly
 easy. Being a right triangle in the only section of the
 density that is above zero, we can calculate it as
 1/2 the area of the base times the height. This
-is {$$}\frac{1}{2} \times 1 \times 2 = 1{/$$}
+is $$\frac{1}{2} \times 1 \times 2 = 1$$
 
 
 Now consider answering the following question.
@@ -339,33 +335,33 @@ random variables. (You'll learn what each of these does in subsequent sections.)
 ## CDF and survival function
 
 Certain areas of PDFs and PMFs are so useful, we give them names.
-The **cumulative distribution function** (CDF) of a random variable, {$$}X{/$$},
+The **cumulative distribution function** (CDF) of a random variable, $$X$$,
 returns the probability that the random variable is less than or equal to the
-value {$$}x{/$$}. Notice the (slightly annoying) convention that we use an upper
-case {$$}X{/$$} to denote a random, unrealized, version of the random variable
-and a lowercase {$$}x{/$$} to denote a specific number that we plug into.
+value $$x$$. Notice the (slightly annoying) convention that we use an upper
+case $$X$$ to denote a random, unrealized, version of the random variable
+and a lowercase $$x$$ to denote a specific number that we plug into.
 (This notation, as odd as it may seem, dates back to Fisher and isn't going
 anywhere, so you might as well get used to it. Uppercase for unrealized random
 variables and lowercase as placeholders for numbers to plug into.) So we
 could write the following to describe the distribution function
-{$$}F{/$$}:
+$$F$$:
 
 
-{$$}
+$$
 F(x) = P(X \leq x)
-{/$$}
+$$
 
 This definition applies regardless of  
 whether the random variable is discrete or continuous. The **survival function**
 of a random variable $X$ is defined as the
-probability that the random variable is greater than the value {$$}x{/$$}.
+probability that the random variable is greater than the value $$x$$.
 
-{$$}
+$$
 S(x) = P(X > x)
-{/$$}
+$$
 
- Notice that {$$}S(x) = 1 - F(x){/$$}, since the survival function evaluated
- at a particular value of {$$}x{/$$} is calculating the probability of the
+ Notice that $$S(x) = 1 - F(x)$$, since the survival function evaluated
+ at a particular value of $$x$$ is calculating the probability of the
  opposite event (greater than as opposed to less than or equal to). The
  survival function is often preferred in biostatistical applications while
  the  distribution function is more generally used (though both convey the
@@ -376,20 +372,20 @@ S(x) = P(X > x)
 
 What are the survival function and CDF from the density considered before?
 
-{$$}
+$$
 F(x) = P(X \leq x) = \frac{1}{2} Base \times Height = \frac{1}{2} (x) \times (2 x) = x^2,
-{/$$}
+$$
 
-for {$$}1 \geq x \geq 0{/$$}. Notice that calculating the survival function
+for $$1 \geq x \geq 0$$. Notice that calculating the survival function
 is now trivial given that we've already calculated the distribution function.
 
-{$$}
+$$
  S(x) = 1 = F(x) = 1 - x^2
-{/$$}
+$$
 
 Again, R has a function that calculates the distribution function for us
-in this case, `pbeta`. Let's try calculating {$$}F(.4){/$$}, {$$}F(.5){/$$}
-and {$$}F(.6){/$$}
+in this case, `pbeta`. Let's try calculating $$F(.4)$$, $$F(.5)$$
+and $$F(.6)$$
 
 {line-numbers=off,lang=r}
 ~~~~~~
@@ -413,12 +409,12 @@ quantiles estimating? In fact, they are estimating the population quantiles.
 Here we define these population analogs.  
 
 
-The  {$$}\alpha^{th}{/$$} **quantile** of a distribution
-with distribution function {$$}F{/$$} is the point {$$}x_\alpha{/$$} so that
+The  $$\alpha^{th}$$ **quantile** of a distribution
+with distribution function $$F$$ is the point $$x_\alpha$$ so that
 
-{$$}
+$$
 F(x_\alpha) = \alpha
-{/$$}
+$$
 
 So the 0.95 quantile of a distribution is the point so that 95% of the mass
 of the density lies below it. Or, in other words, the point so that the
@@ -427,9 +423,9 @@ analogous to the sample
 quantiles where the 0.95 sample quantile is the value so that 95% of the data
 lies below it.
 
- A **percentile** is simply a quantile with {$$}\alpha{/$$} expressed as a percent
+ A **percentile** is simply a quantile with $$\alpha$$ expressed as a percent
  rather than a proportion.  The (population)
-**median** is the {$$}50^{th}{/$$} percentile. Remember that percentiles
+**median** is the $$50^{th}$$ percentile. Remember that percentiles
 are not probabilities! Remember that quantiles have units. So the population
 median height is the height (in inches say) so that the probability that a randomly selected
 person from the population is shorter is 50%. The sample, or empirical,
@@ -438,7 +434,7 @@ sample were shorter.
 
 ### Example
 What is the median of the distribution that we were working with before?
-We want to solve {$$}0.5 = F(x) = x^2{/$$}, resulting in the solution
+We want to solve $$0.5 = F(x) = x^2$$, resulting in the solution
 
 {line-numbers=off,lang=r}
 ~~~~~~

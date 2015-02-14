@@ -16,12 +16,12 @@ Thus, it is less likely for sample means to be far away from the population
 mean than it is for individual observations. (This is why the sample mean is
   a better estimate than the population mean.)
 
-If {$$}X{/$$} is a random variable with mean {$$}\mu{/$$}, the variance of
-{$$}X{/$$} is defined as
+If $$X$$ is a random variable with mean $$\mu$$, the variance of
+$$X$$ is defined as
 
-{$$}
+$$
 Var(X) = E[(X - \mu)^2] = E[X^2] - E[X]^2
-{/$$}
+$$
 
 The rightmost equation is the shortcut formula that is almost always used
 for calculating variances in practice.  
@@ -44,35 +44,35 @@ population mean, the sample variance will estimate the population variance.
 ### Example
 
 What's the variance from the result of a toss of a die?
-First recall that {$$}E[X] = 3.5{/$$}, as we discussed in the previous lecture.
-Then let's calculate the other bit of information that we need, {$$}E[X^2]{/$$}.
+First recall that $$E[X] = 3.5$$, as we discussed in the previous lecture.
+Then let's calculate the other bit of information that we need, $$E[X^2]$$.
 
-{$$}E[X^2] = 1 ^ 2 \times \frac{1}{6} + 2 ^ 2 \times \frac{1}{6} + 3 ^ 2 \times \frac{1}{6} + 4 ^ 2 \times \frac{1}{6} + 5 ^ 2 \times \frac{1}{6} + 6 ^ 2 \times \frac{1}{6} = 15.17{/$$}
+$$E[X^2] = 1 ^ 2 \times \frac{1}{6} + 2 ^ 2 \times \frac{1}{6} + 3 ^ 2 \times \frac{1}{6} + 4 ^ 2 \times \frac{1}{6} + 5 ^ 2 \times \frac{1}{6} + 6 ^ 2 \times \frac{1}{6} = 15.17$$
 
 Thus now we can calculate the variance as:
 
-{$$}Var(X) = E[X^2] - E[X]^2 \approx 2.92.{/$$}
+$$Var(X) = E[X^2] - E[X]^2 \approx 2.92.$$
 
 
 ## Example
 
 What's the variance from the result of the toss of a
-(potentially biased) coin with probability of heads (1) of {$$}p{/$$}?
+(potentially biased) coin with probability of heads (1) of $$p$$?
 
 First recall that
-{$$}E[X] = 0 \times (1 - p) + 1 \times p = p.{/$$}
+$$E[X] = 0 \times (1 - p) + 1 \times p = p.$$
 
-Secondly, recall that since {$$}X{/$$} is either 0 or 1,
-{$$}X^2 = X{/$$}. So we know that:
+Secondly, recall that since $$X$$ is either 0 or 1,
+$$X^2 = X$$. So we know that:
 
-{$$}E[X^2] = E[X] = p{/$$}
+$$E[X^2] = E[X] = p$$
 
 Thus we can now calculate the variance of a coin flip as
-{$$}Var(X) = E[X^2] - E[X]^2 = p - p^2 = p(1 - p).{/$$}
+$$Var(X) = E[X^2] - E[X]^2 = p - p^2 = p(1 - p).$$
 
 This is a well known formula, so it's worth committing
 to memory. It's interesting to note that this function is
-maximized at {$$}p = 0.5{/$$}.
+maximized at $$p = 0.5$$.
 
 {title="Plotting the binomial variance", line-numbers=off,lang=r}
 ~~~
@@ -90,20 +90,20 @@ expected squared deviation around the population mean.
 The sample variance is (almost) the average squared deviation
 of observations around the sample mean. It is given by
 
-{$$}
+$$
 S^2 = \frac{\sum_{i=1} (X_i - \bar X)^2}{n-1}
-{/$$}
+$$
 
 The sample standard deviation is the square root of the sample variance.
 
 The sample variance is almost, but not quite, the average squared deviation from
-the sample mean since we divide by {$$}n-1{/$$} instead of
-{$$}n{/$$}. Why do we do this you might ask? To answer that question
+the sample mean since we divide by $$n-1$$ instead of
+$$n$$. Why do we do this you might ask? To answer that question
 we have to think in the terms of simulations. Remember that the
 sample variance is a random variable, thus it has a distribution
 and that distribution has an associated population mean. That
 mean is the population variance that we're trying to estimate
-if we divide by {$$}(n-1){/$$} rather than {$$}n{/$$}.
+if we divide by $$(n-1)$$ rather than $$n$$.
 
 Moreover, as we collect more data, the distribution of the
 sample variance gets more concentrated around the population
@@ -145,16 +145,16 @@ one realization.  Recall that the average of random sample from a population
 is itself a random variable having a distribution, which in simulation
 settings we can explore by repeated sampling averages.  
 We know that this distribution is centered around the population
-mean, {$$}E[\bar X] = \mu{/$$}. We also know the variance of the distribution
+mean, $$E[\bar X] = \mu$$. We also know the variance of the distribution
 of means of random samples.
 
-The variance of the sample mean is: {$$}Var(\bar X) = \sigma^2 / n{/$$}
-where {$$}\sigma^2{/$$} is the variance of the population being sampled
+The variance of the sample mean is: $$Var(\bar X) = \sigma^2 / n$$
+where $$\sigma^2$$ is the variance of the population being sampled
 from.
 
 This is very useful, since we don't have repeat sample means
 to get its variance directly using the data. We already know a good estimate of
-{$$}\sigma^2{/$$} via the sample variance. So, we can get a good estimate
+$$\sigma^2$$ via the sample variance. So, we can get a good estimate
 of the variability of the mean, even though we only get to observer 1 mean.
 
 Notice also this explains why in all of our simulation experiments the
@@ -167,20 +167,20 @@ deviation of the mean. We call the standard deviation of a statistic its
 standard error.
 
 ## Summing up
-* The sample variance, {$$}S^2{/$$}, estimates the population variance, {$$}\sigma^2{/$$}
-* The distribution of the sample variance is centered around {$$}\sigma^2{/$$}
-* The variance of the sample mean is {$$}\sigma^2 / n{/$$}
-  * Its logical estimate is {$$}s^2 / n{/$$}
-  * The logical estimate of the standard error is {$$}S / \sqrt{n}{/$$}
-* {$$}S{/$$}, the standard deviation, talks about how variable the population is
-* {$$}S/\sqrt{n}{/$$}, the standard error, talks about how variable averages of random
+* The sample variance, $$S^2$$, estimates the population variance, $$\sigma^2$$
+* The distribution of the sample variance is centered around $$\sigma^2$$
+* The variance of the sample mean is $$\sigma^2 / n$$
+  * Its logical estimate is $$s^2 / n$$
+  * The logical estimate of the standard error is $$S / \sqrt{n}$$
+* $$S$$, the standard deviation, talks about how variable the population is
+* $$S/\sqrt{n}$$, the standard error, talks about how variable averages of random
 samples of size $n$ from the population are
 
 ### Simulation example 1: standard normals
 
 Standard normals have variance 1. Let's try sampling
-means of {$$}n{/$$} standard normals. If our theory is correct, they should
- have standard deviation {$$}1/\sqrt{n}{/$$}
+means of $$n$$ standard normals. If our theory is correct, they should
+ have standard deviation $$1/\sqrt{n}$$
 
 
 {title="Simulating means of random normals", line-numbers=off,lang=r}
@@ -197,14 +197,14 @@ means of {$$}n{/$$} standard normals. If our theory is correct, they should
 
 So, in this simulation, we simulated 1000 means of 10 standard normals. Our
 theory says the standard deviation of averages of 10 standard normals must
-be {$$}1/\sqrt{n}{/$$}. Taking the standard deviation of the 10000 means yields
+be $$1/\sqrt{n}$$. Taking the standard deviation of the 10000 means yields
 nearly exactly that. (Note that to get it to be exact, we'd have to simulate
 infinitely many means.)
 
 ### Simulation example 2: uniform density
-Standard uniforms have variance {$$}1/12{/$$}. Our theory mandates
-that means of random samples of {$$}n{/$$} uniforms
-have sd {$$}1/\sqrt{12 \times n}{/$$}. Let's try it with a simulation.
+Standard uniforms have variance $$1/12$$. Our theory mandates
+that means of random samples of $$n$$ uniforms
+have sd $$1/\sqrt{12 \times n}$$. Let's try it with a simulation.
 
 
 
@@ -219,9 +219,9 @@ have sd {$$}1/\sqrt{12 \times n}{/$$}. Let's try it with a simulation.
 ~~~
 
 ## Simulation example 3: Poisson
-Poisson(4) have variance {$$}4{/$$}. Thus means of
-random samples of {$$}n{/$$} Poisson(4)
-should have standard deviation {$$}2/\sqrt{n}{/$$}. Again let's try it out.
+Poisson(4) have variance $$4$$. Thus means of
+random samples of $$n$$ Poisson(4)
+should have standard deviation $$2/\sqrt{n}$$. Again let's try it out.
 
 
 
@@ -237,12 +237,12 @@ should have standard deviation {$$}2/\sqrt{n}{/$$}. Again let's try it out.
 
 ## Simulation example 4: coin flips
 Our last example is an important one. Recall that the variance of a
-coin flip is {$$}p (1 - p){/$$}. Therefore the variance of the average
-of {$$}n{/$$} coin flips should be {$$}\sqrt{\frac{p(1-p)}{n}}{/$$}.
+coin flip is $$p (1 - p)$$. Therefore the variance of the average
+of $$n$$ coin flips should be $$\sqrt{\frac{p(1-p)}{n}}$$.
 
 Let's just do the simulation with a fair coin. Such coin
 flips have variance 0.25. Thus means of
-random samples of {$$}n{/$$} coin flips have sd {$$}1 / (2 \sqrt{n}){/$$}.
+random samples of $$n$$ coin flips have sd $$1 / (2 \sqrt{n})$$.
 Let's try it.
 
 
@@ -284,7 +284,7 @@ of the sons' heights. Therefore, 7.92 tells us exactly how variable
 sons' heights were in the data and (under the assumption that these sons
 are a random sample from the population) estimates how variable sons' heights are
 in the population. In contrast 0.01 and the square root 0.09, estimate how
-variable averages of {$$}n{/$$} sons' heights are.
+variable averages of $$n$$ sons' heights are.
 
 Therefore, the smaller numbers discuss the precision of our estimate of the mean
 of sons' heights. The larger numbers discuss how variable sons' heights are in general.

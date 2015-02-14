@@ -17,18 +17,18 @@ variance and the sample skewness estimates the population skewness.
 ## The population mean for discrete random variables
 The **expected value** or (population) **mean** of a random variable
 is the center of its distribution.
-For discrete random variable {$$}X{/$$} with PMF {$$}p(x){/$$},
+For discrete random variable $$X$$ with PMF $$p(x)$$,
 it is defined as follows:
 
-{$$}
+$$
 E[X] = \sum_x xp(x).
-{/$$}
+$$
 
-where the sum is taken over the possible values of {$$}x{/$$}. Where did
+where the sum is taken over the possible values of $$x$$. Where did
 they get this idea from? It's taken from the physical idea of the center
-of mass of a distribution. Specifically, {$$}E[X]{/$$}
+of mass of a distribution. Specifically, $$E[X]$$
 represents the center of mass of a collection of locations and weights,
-{$$}\{x, p(x)\}{/$$}.
+$$\{x, p(x)\}$$.
 
 ## The sample mean
 It is important to contrast the population mean (the estimand) with the
@@ -37,11 +37,11 @@ mean. Not coincidentally, since the population mean is the center of
 mass of the population distribution, the sample mean is the center of
 mass of the data. In fact, it's exactly the same equation
 
-{$$}
+$$
 \bar X = \sum_{i=1}^n x_i p(x_i)
-{/$$}
+$$
 
-where {$$}p(x_i) = 1/n{/$$}.
+where $$p(x_i) = 1/n$$.
 
 ### Example Find the center of mass of the bars
 Let's go through an example of illustrating how the sample mean is the
@@ -97,13 +97,13 @@ now go through some examples of mathematically calculating the population mean.
 ### Example of a population mean, a fair coin
 [Watch the video before beginning here.](http://youtu.be/F4XMuD_axN8?list=PLpl-gQkQivXiBmGyzLrUjzsblmQsLtkzJ)
 
-Suppose a coin is flipped and {$$}X{/$$} is declared 0 or 1
+Suppose a coin is flipped and $$X$$ is declared 0 or 1
 corresponding to a head or a tail, respectively. What is the expected value of
-{$$}X{/$$}?
+$$X$$?
 
-{$$}
+$$
 E[X] = .5 \times 0 + .5 \times 1 = .5
-{/$$}
+$$
 
 Note, if thought about geometrically, this answer is obvious;
 if two equal weights are spaced at 0 and 1, the center of mass will be 0.5.
@@ -112,14 +112,14 @@ if two equal weights are spaced at 0 and 1, the center of mass will be 0.5.
 ![Fair coin mass function](images/fairCoin.png)
 
 ### What about a biased coin?
-Suppose that a random variable, {$$}X{/$$} , is so that
-{$$}P(X=1) = p{/$$} and {$$}P(X=0) = (1 - p){/$$}
-(This is a biased coin when {$$}p\neq 0.5{/$$}).
+Suppose that a random variable, $$X$$ , is so that
+$$P(X=1) = p$$ and $$P(X=0) = (1 - p)$$
+(This is a biased coin when $$p\neq 0.5$$).
 What is its expected value?
 
-{$$}
+$$
 E[X] = 0 * (1 - p) + 1 * p = p
-{/$$}
+$$
 
 Notice that the expected value isn't a value that the coin can take
 in the same way that the sample proportion of heads will also likely be neither
@@ -131,14 +131,14 @@ answer from an election polling question as if it were a coin flip.
 
 ### Example Die Roll
 
-Suppose that a die is rolled and {$$}X{/$$} is the number face up.
+Suppose that a die is rolled and $$X$$ is the number face up.
 What is the expected value of $X$?
 
-{$$}
+$$
 E[X] = 1 \times \frac{1}{6} + 2 \times \frac{1}{6} +
 3 \times \frac{1}{6} + 4 \times \frac{1}{6} +
 5 \times \frac{1}{6} + 6 \times \frac{1}{6} = 3.5
-{/$$}
+$$
 
 Again, the geometric argument makes this answer obvious without calculation.
 
@@ -148,7 +148,7 @@ Again, the geometric argument makes this answer obvious without calculation.
 ## Continuous random variables
 [Watch this video before beginning](http://youtu.be/YS5EIKsamXI?list=PLpl-gQkQivXiBmGyzLrUjzsblmQsLtkzJ)
 
-For a continuous random variable, {$$}X{/$$}, with density, {$$}f{/$$},
+For a continuous random variable, $$X$$, with density, $$f$$,
 the expected value is again exactly the center of mass of the density. Think
 of it like cutting the continuous density out of a thick piece of wood and
 trying to find the point where it balances out.
@@ -156,8 +156,8 @@ trying to find the point where it balances out.
 
 ### Example
 
-Consider a density where {$$}f(x) = 1{/$$} for {$$}x{/$$} between zero and one.
-Suppose that {$$}X{/$$} follows this density; what is its expected value?  
+Consider a density where $$f(x) = 1$$ for $$x$$ between zero and one.
+Suppose that $$X$$ follows this density; what is its expected value?  
 
 ![Uniform Density](images/uniform.png)
 
