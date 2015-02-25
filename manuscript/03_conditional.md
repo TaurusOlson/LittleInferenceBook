@@ -1,7 +1,7 @@
 # Conditional probability
 
 ## Conditional probability, motivation
-[Watch this video before beginning](http://youtu.be/u6AH6qsSVA4?list=PLpl-gQkQivXiBmGyzLrUjzsblmQsLtkzJ)
+[Watch this video before beginning.](http://youtu.be/u6AH6qsSVA4?list=PLpl-gQkQivXiBmGyzLrUjzsblmQsLtkzJ)
 
 Conditioning a central subject in statistics.
 If we are given information about a random variable, it changes
@@ -33,7 +33,7 @@ $$
 P(A ~|~ B) = \frac{P(A \cap B)}{P(B)}.
 $$
 
-If $$A$$ and $$B$$ are unrelated in any way, or in other words
+If {$$}A{/$$} and {$$}B{/$$} are unrelated in any way, or in other words
 *independent*, (discussed more later in the lecture), then
 
 $$
@@ -127,9 +127,9 @@ A study comparing the efficacy of HIV tests, reports on an experiment which
 concluded that HIV antibody tests have a sensitivity of 99.7% and a specificity of 98.5%
 Suppose that a subject, from a population with a .1% prevalence of HIV, receives a positive test result. What is the positive predictive value?
 
-Mathematically, we want $P(D ~|~ +)$ given the sensitivity, $P(+ ~|~ D) = .997$,
-the specificity, $$P(- ~|~ D^c) =.985$$ and the prevalence
-$$P(D) = .001$$.
+Mathematically, we want {$$}P(D ~|~ +){/$$} given the sensitivity, {$$}P(+ ~|~ D) = .997{/$$},
+the specificity, {$$}P(- ~|~ D^c) =.985{/$$} and the prevalence
+{$$}P(D) = .001{/$$}.
 
 \begin{eqnarray*}
 P(D ~|~ +) & = &\frac{P(+~|~D)P(D)}{P(+~|~D)P(D) + P(+~|~D^c)P(D^c)}\\
@@ -184,12 +184,12 @@ $$
 $$
 
 In other words, the post test odds of disease is the pretest odds of disease
-times the $$DLR_+$$. Similarly, $DLR_-$ relates the decrease in the odds
+times the {$$}DLR_+{/$$}. Similarly, {$$}DLR_-{/$$} relates the decrease in the odds
 of the disease after a negative test result to the odds of disease prior to
 the test.
 
-So, the DLRs are the factors by which you multiply your pre test odds to get
-your post test odds. Thus, if a test has a $$DLR_+$$ of 6, regardless
+So, the DLRs are the factors by which you multiply your pretest odds to get
+your post test odds. Thus, if a test has a {$$}DLR_+{/$$} of 6, regardless
 of the prevalence of disease, the post test odds is six times that of the
 pretest odds.
 
@@ -215,7 +215,7 @@ times that of the hypothesis of absence of disease given the negative test resul
 
 
 ## Independence
-[Watch this video before beginning](http://youtu.be/MY1EfrR1ZUs?list=PLpl-gQkQivXiBmGyzLrUjzsblmQsLtkzJ)
+[Watch this video before beginning.](http://youtu.be/MY1EfrR1ZUs?list=PLpl-gQkQivXiBmGyzLrUjzsblmQsLtkzJ)
 
 Statistical independence of events is the idea that the events are unrelated.
 Consider successive coin flips. Knowledge of the result of the first coin flip
@@ -305,3 +305,17 @@ the countries are a random sample and the interpretation of the
 strength of the inferences adapted in kind.
 
 ## Exercises
+
+1. I pull a card from a deck and do not show you the result. I say that the resulting card is a heart. What is the probability that it is the queen of hearts?
+2. The odds associated with a probability, {$$}p{/$$}, are defined as?
+3. The probability of getting two sixes when rolling a pair of dice is?
+4. The probability that a manuscript gets accepted to a journal is 12% (say). However,
+given that a revision is asked for, the probability that it gets accepted
+is 90%. Is it possible that the probability that a manuscript has a revision
+asked for is 20%? [Watch a video of this problem getting solved](http://youtu.be/E4kE4M1J15s?list=PLpl-gQkQivXhHOcVeU3bSJg78zaDYbP9L) and [see
+the worked out solutions here](http://bcaffo.github.io/courses/06_StatisticalInference/homework/hw2.html#3).
+6. Suppose 5% of housing projects have issues with asbestos. The sensitivity of a test
+for asbestos is 93% and the specificity is 88%. What is the probability that a
+housing project has no asbestos given a negative test expressed as a percentage
+to the nearest percentage point? [Watch a video solution here](https://www.youtube.com/watch?v=rbI97tSvGvQ&list=PLpl-gQkQivXhHOcVeU3bSJg78zaDYbP9L&index=11) and [see the
+worked out problem here](http://bcaffo.github.io/courses/06_StatisticalInference/homework/hw2.html#5).
